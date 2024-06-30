@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Virtual Whiteboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="bg-green-100">
+    <canvas id="whiteboard"></canvas>
+    <div class="controls">
+        
+        <button id="clearBtn" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+            Clear
+        </button>
+        <button id="undoBtn" class="ml-2 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">
+            Undo
+        </button>
+        <button id="redoBtn" class="ml-2 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600">
+            Redo
+        </button>
+        <button id="eraserBtn" class="ml-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">
+            Eraser
+        </button>
+        <select id="toolSelect" class="ml-2 px-3 py-2 bg-gray-200 rounded-lg appearance-none">
+            <option value="pen">Pen</option>
+            <option value="line">Line</option>
+            <option value="rectangle">Rectangle</option>
+            <option value="circle">Circle</option>
+            <option value="text">Text</option>
+        </select>
+        <input type="color" id="colorPicker" class="ml-2">
+        <button id="saveBtn" class="ml-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">
+            Save
+        </button>
+        <input type="file" id="imageInput" accept="image/*" class="hidden">
+    
+    </div>
+    <div id="textInput" class="hidden">
+        <input type="text" id="textBox" class="border border-gray-300 rounded px-3 py-2 focus:outline-none">
+        <button id="textBtn" class="ml-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+            Add Text
+        </button>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
